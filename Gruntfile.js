@@ -13,6 +13,14 @@ module.exports = function(grunt){
             }
         },
         copy: {
+            bootstrap: {
+                expand: true,
+                cwd: "node_modules/",
+                src: [
+                    "bootstrap/dist/css/bootstrap.min.css"
+                ],
+                dest: "server/public/vendors/"
+            },
             jquery: {
                 expand: true,
                 cwd: 'node_modules',
@@ -20,8 +28,18 @@ module.exports = function(grunt){
                     "jquery/dist/jquery.min.js"
                 ],
                 "dest": "server/public/vendors/"
+            },
+            css: {
+                expand: true,
+                cwd: "client",
+                src: [
+                    "styles/styles.css"
+                ],
+                "dest" : "server/public/assets/"
+
             }
         }
+
     });
 
     grunt.loadNpmTasks('grunt-contrib-copy');
