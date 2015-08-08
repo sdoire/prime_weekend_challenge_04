@@ -1,0 +1,30 @@
+html {
+    background-color: #5e5e5e;
+}
+#inputForm {
+    width: 800px;
+    margin: 0 auto;
+}
+
+.jumbotron {
+    background-image: url(https://dewiskbohv5c1.cloudfront.net/assets/logo-prime-horizontal-6909d23113b83bd59bf681f26f940f97.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.post {
+    border: groove;
+    border-color: #0d3349;
+    padding: 10px;
+    width: 500px;
+    margin: 5px auto;
+}
+
+.message {
+    height: 100px;
+    width: 200px;
+}
+
+h1 {
+    text-align: center;
+}

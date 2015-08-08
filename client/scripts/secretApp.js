@@ -17,6 +17,10 @@ $(document).ready(function(){
         location.reload(true);
     });
 
+    $('#inputForm').submit(function () {
+        $(this).children('input[type=text]').val('');
+    });
+
     $('#container').on('click', '.delete', function(){
         //var $el = $(this);
         $.ajax({
@@ -63,7 +67,7 @@ function getData(){
 function appendToContainer(data){
     $('#container').empty();
     for (var i = 0; i < data.length; i++){
-        $('#container').append("<div></div>");
+        $('#container').append("<div class='post'></div>");
         var $el = $('#container').children().last();
         $el.append("<p>" + data[i].name + ": " + "</p>");
         $el.append("<p>" + data[i].message + "</p");

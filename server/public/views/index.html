@@ -12,14 +12,15 @@
 
 <body>
 <div class='jumbotron'><h1>Zeta Message Board</h1></div>
-<form id="inputForm" method="POST">
+<form name="inputForm" id="inputForm" method="POST">
     <label for="name">Name</label>
     <input name="name" id="name" type="text">
-    <textarea name="message" form="inputForm"></textarea>
+    <label for="message">Message to Post</label>
+    <input name="message" id="message" class="message" type="text">
     <input type="submit" id="submit" value="Submit">
+    <button id="reload">Refresh</button>
 </form>
 
-<button id="reload">Refresh</button>
 <div id="container">
 </div>
 </body>
