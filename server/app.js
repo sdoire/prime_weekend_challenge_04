@@ -7,7 +7,8 @@ var app = express();
 var messages = require('./routes/messages');
 var index = require('./routes/index');
 
-var mongoURI = "mongodb://localhost:27017/messages";
+var mongoURI = "mongodb://sarah:sherlock@ds031223.mongolab.com:31223/messages";
+//var mongoURI = "mongodb://localhost:27017/messages";
 var mongoDB = mongoose.connect(mongoURI).connection;
 
 mongoDB.on('error', function(err){
