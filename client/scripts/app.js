@@ -59,9 +59,12 @@ function appendToContainer(data){
     $('#container').empty();
     for (var i = 0; i < data.length; i++){
         $('#container').append("<div class='post'></div>");
+        var time = new Date(data[i].created).toLocaleString();
+        console.log(time);
         var $el = $('#container').children().last();
         $el.append("<p>" + data[i].name + ": " + "</p>");
         $el.append("<p>" + data[i].message + "</p");
+        $el.append("<p>" + time + "</p");
     }
 }
 

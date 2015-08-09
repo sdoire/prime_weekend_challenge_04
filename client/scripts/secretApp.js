@@ -65,13 +65,16 @@ function getData(){
 function appendToContainer(data){
     $('#container').empty();
     for (var i = 0; i < data.length; i++){
+        var time = new Date(data[i].created).toLocaleString();
         $('#container').append("<div class='post'></div>");
         var $el = $('#container').children().last();
         $el.append("<p>" + data[i].name + ": " + "</p>");
         $el.append("<p>" + data[i].message + "</p");
         $el.append("<button class='delete' data-id='" + data[i]._id +"'>DELETE</button>");
+        $el.append("<p>" + time + "</p");
     }
 }
+
 
 
 
