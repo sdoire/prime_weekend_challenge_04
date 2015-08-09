@@ -39,7 +39,7 @@ $(document).ready(function(){
                 }
             });
 
-            $el.hide('slow', function(){
+            $el.fadeOut('slow', function(){
                 $el.remove();
             });
 
