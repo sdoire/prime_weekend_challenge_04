@@ -13,8 +13,9 @@ $(document).ready(function(){
         })
     });
 
-    $('body').on('click', '#reload', function(){
-        location.reload(true);
+    $('body').on('click', '#reload', function(event) {
+        event.preventDefault();
+        getData();
     });
 
     $('#inputForm').submit(function () {
@@ -42,16 +43,6 @@ $(document).ready(function(){
     });
     getData();
 });
-
-function reload(){
-    $.ajax({
-       type: "GET",
-        url: "/",
-        success: function(){
-            console.log("Success!");
-        }
-    });
-}
 
 function getData(){
     $.ajax({
