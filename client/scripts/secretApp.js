@@ -23,24 +23,28 @@ $(document).ready(function(){
     });
 
     $('#container').on('click', '.delete', function(){
-        //var $el = $(this);
-        $.ajax({
-            type: "DELETE",
-            url: "/messages/" + $(this).data("id"),
-            success: function(){
-                console.log("Deletion sent");
-            },
-            error: function(xhr, status){
-                alert("Error: ", status);
-            },
-            complete: function(){
-                console.log("Delete Complete!");
-            }
-        });
+        if (confirm('Are you sure you want to delete this post?')) {
+            $.ajax({
+                type: "DELETE",
+                url: "/messages/" + $(this).data("id"),
+                success: function(){
+                    console.log("Deletion sent");
+                },
+                error: function(xhr, status){
+                    alert("Error: ", status);
+                },
+                complete: function(){
+                    console.log("Delete Complete!");
+                }
+            });
 
-        $(this).parent().remove();
+            $(this).parent().remove();
 
+            } else {
+            return false;
+        }
     });
+
     getData();
 });
 
