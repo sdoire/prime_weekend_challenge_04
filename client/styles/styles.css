@@ -2,8 +2,8 @@ body {
     background-color: #A3A3C2;
 }
 #inputForm {
-    width: 700px;
-    margin: auto;
+    width: 75%;
+    margin: 0 auto 20px auto;
 }
 
 .jumbotron {
@@ -31,7 +31,6 @@ body {
 }
 
 .message {
-    height: 100px;
-    width: 200px;
+    width: 400px;
 }
 
