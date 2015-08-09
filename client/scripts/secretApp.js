@@ -23,6 +23,7 @@ $(document).ready(function(){
     });
 
     $('#container').on('click', '.delete', function(){
+        var $el = $(this).parent();
         if (confirm('Are you sure you want to delete this post?')) {
             $.ajax({
                 type: "DELETE",
@@ -38,7 +39,9 @@ $(document).ready(function(){
                 }
             });
 
-            $(this).parent().remove();
+            $el.hide('slow', function(){
+                $el.remove();
+            });
 
             } else {
             return false;

@@ -1,15 +1,25 @@
-html {
-    background-color: #5e5e5e;
+body {
+    background-color: #A3A3C2;
 }
 #inputForm {
-    width: 800px;
-    margin: 0 auto;
+    width: 700px;
+    margin: auto;
 }
 
 .jumbotron {
+    position: relative;
     background-image: url(https://dewiskbohv5c1.cloudfront.net/assets/logo-prime-horizontal-6909d23113b83bd59bf681f26f940f97.svg);
-    background-size: cover;
+    background-size: 60%;
+    background-position: center;
     background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    padding-top: 100px;
+}
+
+.jumbotron h1 {
+    text-align: center;
+    color: #5e5e5e;
 }
 
 .post {
@@ -25,6 +35,3 @@ html {
     width: 200px;
 }
 
-h1 {
-    text-align: center;
-}
